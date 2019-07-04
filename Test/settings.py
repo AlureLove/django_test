@@ -30,13 +30,23 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [#所有的app模块注册进来
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accessAPP',
+    'alarmMGT',
+    'authorityMGT',
+    'logMGT',
+    'sceneMGT',
+    'sceneMOT',
+    'userMGT',
+    'videoMGT',
+    'videoMOT',
+
 ]
 
 MIDDLEWARE = [
@@ -73,10 +83,14 @@ WSGI_APPLICATION = 'Test.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
+DATABASES = {#配置数据库#字典
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',#改成mysql
+        'NAME': 'Test',#数据库名称
+        'USER':'root',
+        'PASSWORD':'password123',
+        'HOST':'193.112.32.89',
+        'PORT':'3306',
     }
 }
 
@@ -103,9 +117,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'#zh-hans#语言配置
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'#Asia/Shanghai#时区配置
 
 USE_I18N = True
 
