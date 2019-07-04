@@ -83,6 +83,7 @@ WSGI_APPLICATION = 'Test.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
+<<<<<<< HEAD
     #'default': {
     #    'ENGINE': 'django.db.backends.sqlite3',
     #   'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -94,6 +95,19 @@ DATABASES = {
          'PASSWORD': 'password123',
          'HOST': '193.112.32.89',
          'PORT': '3306'
+=======
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+    'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'NAME': 'Test',#数据库名称
+         'USER':'root',
+         'PASSWORD':'password123',
+         'HOST':'193.112.32.89',
+         'PORT':'3306'
+>>>>>>> 057363deb0e6e74aa741349b4cd1e3425d66df89
      }
 }
 
@@ -120,7 +134,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
+<<<<<<< HEAD
 #中文设置
+=======
+>>>>>>> 057363deb0e6e74aa741349b4cd1e3425d66df89
 LANGUAGE_CODE = 'zh-hans'
 
 TIME_ZONE = 'Asia/Shanghai'
