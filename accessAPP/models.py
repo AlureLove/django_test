@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # from django.db import models
 # import datetime
 # # Create your models here.
@@ -14,11 +14,9 @@
 #     depstatus = models.IntegerField(choices=STATUS, default=1)
 #     detail = models.TextField(default='', verbose_name='描述')
 #     price = models.FloatField
-=======
 from django.db import models
 import datetime
 # Create your models here.
-
 
 class accessAPP_Application(models.Model):
     STATUS = [
@@ -34,4 +32,4 @@ class accessAPP_Application(models.Model):
     approval_Time = models.DateTimeField(default='', null=True, verbose_name='审批时间')
     approval_User = models.IntegerField(default=0, verbose_name='审批人')
     approval_Detail = models.CharField(max_length=50, default='', verbose_name='审批反馈')
->>>>>>> 057363deb0e6e74aa741349b4cd1e3425d66df89
+

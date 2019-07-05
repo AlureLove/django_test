@@ -17,7 +17,6 @@ class logMGT_Logging(models.Model):
     device_Control = models.CharField(max_length=50, default='', verbose_name='设备控制')
     user_Action = models.CharField(max_length=50, default='', verbose_name='用户行为')
 
-
 class logMGT_List(models.Model):
     STATUS = [
         (1, '状态变化'),
