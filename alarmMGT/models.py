@@ -1,4 +1,3 @@
-from datetime import timezone
 
 from django.db import models
 
@@ -55,7 +54,7 @@ class WarningHandleRecord(models.Model):  # 警告处理记录
 
 class WarningEnvironmentRecord(models.Model):  # 警告环境记录
     warning_ID = models.AutoField(primary_key=True)
-    warning_UpdateTime = models.DateTimeField(default=timezone.now, verbose_name='更新时间')
+    warning_UpdateTime = models.DateTimeField(auto_now=True, verbose_name='更新时间')
     warning_Temperature = models.FloatField(verbose_name='温度检测')
     warning_Humidity = models.FloatField(verbose_name='湿度检测')
     warning_CarbonDioxide = models.FloatField(verbose_name='二氧化碳检测')
@@ -64,7 +63,7 @@ class WarningEnvironmentRecord(models.Model):  # 警告环境记录
 
 class WarningFightingRecord(models.Model):  # 警告消防记录
     warning_ID = models.AutoField(primary_key=True)
-    warning_UpdateTime = models.DateTimeField(default=timezone.now, verbose_name='更新时间')
+    warning_UpdateTime = models.DateTimeField(auto_now=True, verbose_name='更新时间')
     warning_CH4 = models.FloatField(blank=True, null=True, verbose_name='甲烷检测')
     warning_Smog = models.FloatField(blank=True, null=True, verbose_name='烟雾检测')
     warning_Fire = models.FloatField(blank=True, null=True, verbose_name='火光检测')
@@ -72,13 +71,13 @@ class WarningFightingRecord(models.Model):  # 警告消防记录
 
 class WarningSecurityRecord(models.Model):  # 警告安全记录
     warning_ID = models.AutoField(primary_key=True)
-    warning_UpdateTime = models.DateTimeField(default=timezone.now, verbose_name='更新时间')
-    warning_Invasion = models.BooleanField(blank=True, null=True, verbose_name='入侵检测')
-    warning_EntranceGuard = models.BooleanField(blank=True, null=True, verbose_name='门禁检测')
+    warning_UpdateTime = models.DateTimeField(auto_now=True, verbose_name='更新时间')
+    warning_Invasion = models.BooleanField(blank=True, verbose_name='入侵检测')
+    warning_EntranceGuard = models.BooleanField(blank=True, verbose_name='门禁检测')
 
 
 class WarningSceneRecord(models.Model):  # 警告场景记录
 
     warning_ID = models.AutoField(primary_key=True)
-    warning_UpdateTime = models.DateTimeField(default=timezone.now, verbose_name='更新时间')
+    warning_UpdateTime = models.DateTimeField(auto_now=True, verbose_name='更新时间')
     warning_Online = models.BooleanField(verbose_name='是否在线')
